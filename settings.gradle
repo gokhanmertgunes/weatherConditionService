@@ -1,0 +1,4 @@
+rootProject.name = 'weatherConditionService'
+include 'common'
+include 'web'
+include 'worker'
