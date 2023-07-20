@@ -22,7 +22,7 @@ public class CoordResultHandlerServiceTests
     private ICityQueueService cityQueueService;
 
     @Test
-    public void savePost() {
+    public void test_ExecuteMessage() {
         CityCoordinatesDto coordinatesDto = new CityCoordinatesDto(50, 50);
         QueueCoordResultDto coordResultDto = new QueueCoordResultDto("Ankara", LocalDate.of(2023, 1, 1), LocalDate.of(2023, 1, 2), coordinatesDto);
 

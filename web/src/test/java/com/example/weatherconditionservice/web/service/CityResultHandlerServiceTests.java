@@ -30,7 +30,7 @@ public class CityResultHandlerServiceTests
     private ArgumentCaptor<City> cityArgumentCaptor;
 
     @Test
-    public void savePost()
+    public void saveCity()
     {
         CityDto city = CityDto.builder().city("Ankara").result(CityResultsDto.builder().date(LocalDate.of(2023,1,1)).categories(CityCategoriesDto.builder().co("Good").o3("Good").so2("Good").build()).build()).build();
 
