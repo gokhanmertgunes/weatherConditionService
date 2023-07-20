@@ -16,8 +16,6 @@ import java.util.List;
 public class CityService implements ICityService
 {
     private final ICityRepository cityRepository;
-   // private final ICrawlerClient crawlerClient;
-
    public void saveCity(City city){ cityRepository.insert(city); }
 
     public List<City> getAllCityInformationBetweenDates(String city, LocalDate startDate, LocalDate endDate)
@@ -29,32 +27,5 @@ public class CityService implements ICityService
     }
 
 }
-//    public void fetchWeatherInformation(String cityName, LocalDate startDate, LocalDate endDate)
-//    {
-//        if (startDate == null && endDate == null) {
-//            endDate = LocalDate.now();
-//            startDate = endDate.minusWeeks(1);
-//        }
-//
-//        CityCoordinates coordinates = crawlerClient.CoordinateInformation(cityName);
-//
-//
-//        Stream.iterate(startDate, date -> date.plusDays(1))
-//                .limit(ChronoUnit.DAYS.between(startDate, endDate.plusDays(1)))
-//                .forEach(date -> {
-//                    if(!cityRepository.existsByCityAndResult_Date(cityName,date)) {
-//                        CityCategories cityCategories = crawlerClient.WeatherInformation(coordinates.getLat(),coordinates.getLon(), date);
-//                        City city = City.builder()
-//                                .city(cityName)
-//                                .result(CityResults.builder()
-//                                        .date(date)
-//                                        .categories(cityCategories)
-//                                        .build())
-//                                .build();
-//
-//                        cityRepository.insert(city);
-//                    }
-//                });
-//    }
 
 
