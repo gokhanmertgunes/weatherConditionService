@@ -29,7 +29,7 @@ public class CrawlerClientTests
     @Mock
     private IUtcToUnixConverter unixConverter;
 
-    private String apiKey = "478be8e03e482d875ca22cc49c5acb05";
+    private String apiKey = "********************************";
 
     @Test
     public void test_fetchCoordinateInformation() throws JsonProcessingException
